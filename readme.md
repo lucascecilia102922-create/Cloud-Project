@@ -174,22 +174,6 @@ Escala:
 
 ---
 
-# Observabilidade
-
-Prometheus:
-
-métricas
-
-Grafana:
-
-dashboards
-
-OpenTelemetry:
-
-tracing distribuído
-
----
-
 # Terraform
 
 Executar:
