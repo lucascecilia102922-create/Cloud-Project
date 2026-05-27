@@ -1,5 +1,8 @@
 # Loja Veloz – Plataforma Cloud DevOps
 
+# Link do vídeo de apresentação do projeto:  
+https://youtu.be/OZ7rO_1_tM0
+
 ## Objetivo
 
 Projeto de modernização da plataforma de pedidos da Loja Veloz.
