@@ -1,0 +1,40 @@
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: cloud
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - "5432:5432"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+
+  gateway:
+    build:
+      context: ./services/gateway
+    ports:
+      - "5000:5000"
+    depends_on:
+      - pedidos
+      - estoque
+      - pagamentos
+
+  pedidos:
+    build:
+      context: ./services/pedidos
+    ports:
+      - "5001:5000"
+
+  estoque:
+    build:
+      context: ./services/estoque
+    ports:
+      - "5002:5000"
+
+  pagamentos:
+    build:
+      context: ./services/pagamentos
+    ports:
+      - "5001:5000"
